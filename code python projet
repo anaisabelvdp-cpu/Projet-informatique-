@@ -1,1 +1,29 @@
+import random  #générer des éléments aléatoires.
 
+#Couleurs possibles
+couleurs = ["rouge", "bleu", "vert", "jaune", "orange", "violet"]
+
+# Générer la combinaison secrète
+combinaison = []
+for i in range(4):
+    combinaison.append(random.choice(couleurs))
+
+print("Jeu du Mastermind")
+print("Couleurs possibles :", couleurs)
+
+# Demander une proposition au joueur
+entree = input("Entre 4 couleurs séparées par un espace : ")
+proposition = entree.split()
+
+bien_places = 0
+mal_places = 0
+
+# Comparaison des couleurs
+for i in range(4):
+    if proposition[i] == combinaison[i]:
+        bien_places += 1
+    elif proposition[i] in combinaison:
+        mal_places += 1
+
+print("Couleurs bien placées :", bien_places)
+print("Couleurs mal placées :", mal_places)
