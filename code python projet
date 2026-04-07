@@ -21,3 +21,30 @@ mal_places = 0
 # Comparaison des couleurs
 
 #print les couleurs si elle sont bien places ou mal place
+# On compare les couleurs de l’ordinateur à celle du joueur
+
+For i in range(4): 
+       if proposition[i] == combinaison[i]
+             bien_places +=1 
+
+# Si couleur mal placé alors vérifier si elle est présente dans la combinaison secrète.
+
+elif proposition[i] in combinaison: 
+      mal_places +=1 
+
+# Dire au joueur le nombre de pions bien placé 
+
+print(“Tu as” , bien_places, “couleurs bien placé”)
+
+print(“Tu as” ,mal_places, “couleurs mal placé mais présente dans la combinaison”)
+
+# Vérifier si le joueur a gagné 
+
+If bien_places == 4:
+    Gagne = True
+     print(“Bravo tu as remporté la partie”)
+
+Or boucle
+
+else victoire = False:
+         print(“Dommage, tu as perdu”)
